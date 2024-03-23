@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "My Copy",
+  "description": "Manage your clipboard history",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content_script.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background/service_worker.js"
+  }
+}
