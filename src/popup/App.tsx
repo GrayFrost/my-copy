@@ -1,4 +1,7 @@
+import '../global.css';
 import "./App.css";
+import { Button } from "@/components/ui/button";
+
 
 export default function App() {
   const openSettings = () => {
@@ -10,8 +13,8 @@ export default function App() {
   };
   return (
     <div className="popup">
-      <h1></h1>popup
-      <h2 onClick={openSettings}>open settings</h2>
+      <h1>popup</h1>
+      <Button onClick={openSettings}>open settings</Button>
     </div>
   );
 }
